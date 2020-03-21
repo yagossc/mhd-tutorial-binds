@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/select.h>
 #include <sys/socket.h>
@@ -7,7 +9,7 @@
 
 // answer_to_connection gives a simple static answer to any connection
 // received by our simple tutorial server: Hello, browser!
-int answer_to_connection(void *cls, struct MHD_CONNECTION *connection,
+int answer_to_connection(void *cls, struct MHD_Connection *connection,
                          const char *url,
                          const char *method, const char *version,
                          const char *upload_data,
